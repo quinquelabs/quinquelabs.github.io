@@ -220,34 +220,49 @@ footer .socials a:hover {
   100% {opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive design */
+/* Responsive design para Navbar */
 @media (max-width: 768px) {
 
-  /* Navbar */
   .navbar {
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
   }
 
+  .logo-link {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
   .logo-small {
     height: 50px;
-    margin-bottom: 0;
   }
 
   .hamburger {
     display: block;
+    font-size: 2.2rem;
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1500;
   }
 
   .nav-links {
-    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #ffffff;
     flex-direction: column;
-    width: 100%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    min-width: 200px;
     text-align: center;
-    background-color: white;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
   }
 
   .nav-links.show {
@@ -255,10 +270,11 @@ footer .socials a:hover {
   }
 
   .nav-links li a {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
   }
 
-  /* Hero Section */
+  /* Hero */
   .hero {
     padding: 2rem 1rem;
   }
@@ -272,7 +288,7 @@ footer .socials a:hover {
     font-size: 2rem;
   }
 
-  /* Projects Section */
+  /* Projects */
   .projects {
     padding: 2rem 1rem;
   }
@@ -286,7 +302,7 @@ footer .socials a:hover {
     width: 100%;
   }
 
-  /* Reader Section */
+  /* Reader */
   .reader-section {
     padding: 2rem 1rem;
   }
@@ -296,3 +312,4 @@ footer .socials a:hover {
     padding: 1rem;
   }
 }
+
