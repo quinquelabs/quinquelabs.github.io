@@ -1,0 +1,122 @@
+/* General Settings */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #1D1D1D;
+  background-color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  height: 50px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #6A9871;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #6A9871;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #333333;
+}
+
+/* About Section */
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Projects Section */
+.projects {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 2px solid #6A9871;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer .socials a {
+  color: #6A9871;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer .socials a:hover {
+  color: #ffffff;
+}
