@@ -1,6 +1,6 @@
 // pdfreader.js
 
-const url = 'lectura-semana.pdf'; // Aquí tu PDF
+const url = 'LTorres2024.pdf'; // Aquí tu PDF
 
 let pdfDoc = null,
     pageNum = 1,
