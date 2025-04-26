@@ -1,157 +1,40 @@
-/* General Settings */
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #1D1D1D;
-  background-color: #ffffff;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Navbar */
-.navbar {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.logo-small {
-  height: 60px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: 700;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-.navbar ul li a:hover {
-  color: #6A9871;
-}
-
-/* Hero Section */
-.hero {
-  background-color: #6A9871;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-}
-
-.logo-large {
-  width: 300px;
-  max-width: 80%;
-  margin-bottom: 1rem;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  margin-top: 1rem;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.btn-primary {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 2rem;
-  display: inline-block;
-  font-size: 1.2rem;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #333333;
-  transform: scale(1.05);
-}
-
-/* About & Section Titles */
-.about, .projects {
+/* Reader Section */
+.reader-section {
   padding: 4rem 2rem;
   text-align: center;
 }
 
-.about h2, .projects h2 {
+.reader-section h2 {
   font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#pdf-render {
+  max-width: 100%;
   margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-/* Projects Section */
-.project-list {
+.pdf-controls {
+  margin-top: 1rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  align-items: center;
+  gap: 1rem;
 }
 
-.project-card {
-  background-color: #ffffff;
-  border: 2px solid #6A9871;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 250px;
-  transition: transform 0.3s, box-shadow 0.3s;
+.pdf-controls button {
+  background-color: #6A9871;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 4rem;
-}
-
-footer .socials a {
-  color: #6A9871;
-  text-decoration: none;
-  margin: 0 0.5rem;
-  transition: color 0.3s;
-}
-
-footer .socials a:hover {
-  color: #ffffff;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  0% {opacity: 0; transform: translateY(20px);}
-  100% {opacity: 1; transform: translateY(0);}
+.pdf-controls button:hover {
+  background-color: #55805C;
 }
