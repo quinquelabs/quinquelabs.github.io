@@ -34,24 +34,34 @@ img {
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #ffffff;
+  flex-direction: column;
+  overflow: hidden;
   padding: 0;
+  gap: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  min-width: 200px;
+  text-align: center;
+  z-index: 1000;
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: 700;
-  font-size: 1.2rem;
-  transition: color 0.3s;
+.nav-links li {
+  padding: 1rem 0;
 }
 
-.nav-links li a:hover {
-  color: #6A9871;
+.nav-links.show {
+  max-height: 500px; /* Altura suficiente para el menú completo */
+  padding: 1.5rem 0;
 }
+
 
 /* Hamburger Menu Button */
 .hamburger {
