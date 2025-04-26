@@ -1,4 +1,4 @@
-/* General Settings */
+/* General */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -18,20 +18,21 @@ body {
   z-index: 1000;
 }
 
-.navbar .logo {
-  height: 50px;
+.logo-small {
+  height: 60px;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .navbar ul li a {
   text-decoration: none;
   color: #000000;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .navbar ul li a:hover {
@@ -43,15 +44,23 @@ body {
   background-color: #6A9871;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  padding: 2rem;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
+.logo-large {
+  width: 300px;
+  max-width: 80%;
   margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
 }
 
 .btn-primary {
@@ -61,8 +70,9 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: inline-block;
+  font-size: 1.2rem;
 }
 
 .btn-primary:hover {
@@ -75,6 +85,11 @@ body {
   text-align: center;
 }
 
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 /* Projects Section */
 .projects {
   padding: 4rem 2rem;
@@ -82,12 +97,16 @@ body {
   text-align: center;
 }
 
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 .project-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .project-card {
