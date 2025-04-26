@@ -9,20 +9,35 @@
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
-    <a href="https://quinquelabs.github.io"><img src="logo_transparent_background.png" alt="Quinqué Labs Logo" class="logo-small"></a>
+    <img src="logo_transparent_background.png" alt="Quinqué Labs Logo" class="logo-small">
     <ul>
       <li><a href="https://sabiapr.github.io" target="_blank" rel="noopener noreferrer">sabIA</a></li>
       <li><a href="elbukclob.html">El bukclob</a></li>
       <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="reader.html">Reader</a></li>
     </ul>
   </nav>
 
+  <!-- Sección El bukclob -->
   <section class="about">
     <h2>¿Qué es El bukclob?</h2>
     <p>El bukclob es nuestro club de lectura enfocado en el pensamiento crítico, la literatura transformadora y la comunidad creativa.</p>
   </section>
 
+  <!-- Sección Lectura de la Semana -->
+  <section class="reader-section">
+    <h2>Lectura de la semana</h2>
+    <canvas id="pdf-render"></canvas>
+    <div class="pdf-controls">
+      <button id="prev-page">Anterior</button>
+      <button id="next-page">Siguiente</button>
+      <span>Página: <span id="page-num"></span> / <span id="page-count"></span></span>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>© 2025 Quinqué Labs</p>
     <div class="socials">
@@ -31,6 +46,10 @@
       <a href="#">Contacto</a>
     </div>
   </footer>
+
+  <!-- Scripts para PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="pdfreader.js"></script>
 
 </body>
 </html>
