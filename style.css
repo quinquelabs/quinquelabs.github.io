@@ -272,3 +272,49 @@ footer .socials a:hover {
   }
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    gap: 1rem;
+  }
+
+  .navbar ul li a {
+    font-size: 1.2rem;
+  }
+}
+
