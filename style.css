@@ -34,36 +34,24 @@ img {
 }
 
 .nav-links {
-  position: absolute;
-  top: 70px;
-  right: 20px;
-  background-color: #ffffff;
-  flex-direction: column;
-  overflow: hidden;
-  padding: 0;
-  gap: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column;
-  max-height: 0;
-  transition: max-height 0.4s ease;
-  min-width: 200px;
-  text-align: center;
-  z-index: 1000;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li {
-  padding: 1rem 0;
+.nav-links li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1D1D1D;
 }
 
-.nav-links.show {
-  max-height: 500px; /* Altura suficiente para el menú completo */
-  padding: 1.5rem 0;
+.nav-links li a:hover {
+  color: #6A9871;
 }
 
-
-/* Hamburger Menu Button */
+/* Mobile Nav */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -71,6 +59,35 @@ img {
   border: none;
   color: #000000;
   cursor: pointer;
+}
+
+/* Responsive Nav Toggle (Mobile Only) */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #ffffff;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    min-width: 200px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+    padding: 1.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1500;
+  }
 }
 
 /* Hero Section */
@@ -161,47 +178,42 @@ img {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Reader Section */
-.reader-section {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.reader-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-#pdf-render {
-  max-width: 100%;
-  margin: 0 auto 1rem auto;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  display: block;
-}
-
-.pdf-controls {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.pdf-controls button {
-  background-color: #6A9871;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  font-weight: bold;
-  border-radius: 5px;
+/* Interactive Map Section */
+.map-container svg path,
+.map-container svg polygon {
+  fill: #6A9871;
+  stroke: #000;
+  stroke-width: 0.5;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: fill 0.2s ease;
 }
 
-.pdf-controls button:hover {
-  background-color: #55805C;
-  transform: scale(1.05);
+.map-container svg path:hover,
+.map-container svg polygon:hover {
+  fill: #DFF71D;
+}
+
+.map-container svg path.clicked,
+.map-container svg polygon.clicked {
+  fill: #FF9900 !important;
+}
+
+
+/* SVG Styles */
+.map-container svg path {
+  fill: #6A9871;
+  stroke: #000;
+  stroke-width: 0.5;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.map-container svg path:hover {
+  fill: #DFF71D;
+}
+
+.map-container svg path.clicked {
+  fill: #FF9900 !important;
 }
 
 /* Footer */
@@ -226,100 +238,6 @@ footer .socials a:hover {
 
 /* Animations */
 @keyframes fadeIn {
-  0% {opacity: 0; transform: translateY(20px);}
-  100% {opacity: 1; transform: translateY(0);}
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
-
-/* Responsive design para Navbar */
-@media (max-width: 768px) {
-
-  .navbar {
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .logo-link {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .logo-small {
-    height: 50px;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 2.2rem;
-    background: none;
-    border: none;
-    color: #000000;
-    cursor: pointer;
-    z-index: 1500;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: #ffffff;
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    display: none;
-    min-width: 200px;
-    text-align: center;
-    z-index: 1000;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li a {
-    font-size: 1.4rem;
-    font-weight: 700;
-  }
-
-  /* Hero */
-  .hero {
-    padding: 2rem 1rem;
-  }
-
-  .logo-large {
-    width: 200px;
-    margin-bottom: 1rem;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  /* Projects */
-  .projects {
-    padding: 2rem 1rem;
-  }
-
-  .project-list {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .project-card {
-    width: 100%;
-  }
-
-  /* Reader */
-  .reader-section {
-    padding: 2rem 1rem;
-  }
-
-  /* Footer */
-  footer {
-    padding: 1rem;
-  }
-}
-
